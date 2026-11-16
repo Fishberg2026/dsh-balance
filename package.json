@@ -1,0 +1,56 @@
+{
+  "name": "dsh-balance-pill",
+  "version": "0.7.0",
+  "private": true,
+  "description": "Show the DeepSeek Platform wallet balance at the right end of the composer status line; hover for this session's estimated spend, priced from the official table",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fishberg2026/dsh-balance.git"
+  },
+  "homepage": "https://github.com/Fishberg2026/dsh-balance#readme",
+  "bugs": {
+    "url": "https://github.com/Fishberg2026/dsh-balance/issues"
+  },
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek",
+    "balance",
+    "wallet",
+    "composer",
+    "usage",
+    "cost"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0-rc.2 <0.2.3-0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "license": "MIT"
+}

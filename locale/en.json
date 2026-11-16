@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Balance pill",
+    "description": "Shows the DeepSeek Platform wallet balance at the right end of the composer status line, rounded to one decimal; hover to see this session's estimated spend, priced from the official price table that refreshes daily, and click to open the top-up page in-app, falling back to the system browser when the in-app view is unavailable.",
+    "detail": "docs/DETAIL.md"
+  }
+}
